@@ -1,3 +1,6 @@
+# Biblia Reina-Valera 1960
+
+Nuget de la biblia desde el Génesis hasta el Apocalipsis con 31002 versículos, en español.
 
 ## Método `Get` de clase `Bible`
 
@@ -9,14 +12,20 @@ Ejemplo en `C#` del método `Get` que devuelve una lista `List<LifeBread>`. Para
 
 using System.Linq;
 
-var bibliaRV1960= RV1960.Bible.Get(); // Lista completa
+var bibliaRV1960 = RV1960.Bible.Get(); // Lista completa
 
-string verso = bibliaRV1960.Where(s => s.Book == "Juan" 
-                                    && s.Chapter==3
-                                    && s.Verse==16).First().Text;
+var libros = bibliaRV1960.GroupBy(x => x.Book).Select(g => new { Libro = g.Key }).ToList();
 
-Console.WriteLine($"{verso}");
+foreach (var item in libros)
+{
+    Console.WriteLine(item.Libro);
+}
 
+string verso = bibliaRV1960.Where(s => s.Book == "Juan"
+                                    && s.Chapter == 3
+                                    && s.Verse == 16).First().Text;
+
+Console.WriteLine($"\n{verso}\n");
 
 
 foreach (var item in bibliaRV1960.Where(s => s.Book == "Salmos" && s.Chapter == 23))
