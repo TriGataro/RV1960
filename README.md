@@ -1,6 +1,6 @@
 # Biblia Reina-Valera 1960
 
-Nuget de la biblia desde el Génesis hasta el Apocalipsis con 31002 versículos, en español.
+[NuGet](https://www.nuget.org/packages/RV1960/) de la biblia desde el Génesis hasta el Apocalipsis con 31002 versículos, en español.
 
 ## Método `Get` de clase `Bible`
 
