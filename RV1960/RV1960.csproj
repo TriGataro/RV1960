@@ -1,16 +1,18 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Title>Biblia</Title>
-    <Description>Biblia </Description>
+    <Title>Biblia Reina-Valera 1960</Title>
+    <Description>Libreria Biblia Reina-Valera 1960 en español</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageTags>biblia</PackageTags>
-    <Version>1.0.1</Version>
+    <PackageTags>biblia, Jesús, evangelio, Dios, Español</PackageTags>
+    <Version>1.2.0.0</Version>
+    <PackageProjectUrl>https://github.com/TriGataro/RV1960</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TriGataro/RV1960</RepositoryUrl>
+    <PackageReleaseNotes>Se actualizan tags</PackageReleaseNotes>
   </PropertyGroup>
-
   <ItemGroup>
     <None Update="README.md">
       <Pack>True</Pack>
@@ -19,3 +21,4 @@
   </ItemGroup>
 
 </Project>
+
