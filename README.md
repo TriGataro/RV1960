@@ -12,7 +12,7 @@ Ejemplo en `C#` del método `Get` que devuelve una lista `List<LifeBread>`. Para
 
 using System.Linq;
 
-var bibliaRV1960 = RV1960.Bible.Get(); // Lista completa
+var bibliaRV1960 = RV1960.Bible.Get(); // Lista completa de versículos
 
 var libros = bibliaRV1960.GroupBy(x => x.Book).Select(g => new { Libro = g.Key }).ToList();
 
