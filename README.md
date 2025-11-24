@@ -11,28 +11,33 @@ Ejemplo en `C#` del método `Get` que devuelve una lista `List<LifeBread>`. Para
 ```csharp
 
 using System.Linq;
+using RV1960;
 
-var bibliaRV1960 = RV1960.Bible.Get(); // Lista completa de versículos
+var bibliaRV1960 = Bible.Get(); // Lista completa de versículos
 
 var libros = bibliaRV1960.GroupBy(x => x.Book).Select(g => new { Libro = g.Key }).ToList();
 
+//Lista de libros de la Biblia
 foreach (var item in libros)
 {
     Console.WriteLine(item.Libro);
 }
 
-string verso = bibliaRV1960.Where(s => s.Book == "Juan"
+//Búsqueda de un versículo específico
+var verso = bibliaRV1960.Where(s => s.Book == "Juan"
                                     && s.Chapter == 3
-                                    && s.Verse == 16).First().Text;
+                                    && s.Verse == 16).First();
 
-Console.WriteLine($"\n{verso}\n");
+Console.WriteLine($"\n{verso.Text}\n{verso.Footer}\n");
 
 
+//Lista de versículos de un capítulo específico
 foreach (var item in bibliaRV1960.Where(s => s.Book == "Salmos" && s.Chapter == 23))
 {
     Console.WriteLine($"{item.Text}");
 }
 
 ```
-
+Espero que esta librería sea de edificación y de bendición para ustedes.
+Gracia y Paz a vosotros.
 
