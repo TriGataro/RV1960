@@ -32,5 +32,9 @@ public record LifeBread
     /// <summary>
     /// Titulo del capitulo
     /// </summary>
-    public string Title { get; set; }     
+    public string Title { get; set; }
+    /// <summary>
+    /// Footer formato "Libro Capitulo:Versiculo"
+    /// </summary>
+    public string Footer => $"{this.Book} {this.Chapter}: {this.Verse}";
 }
