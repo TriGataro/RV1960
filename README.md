@@ -37,6 +37,15 @@ foreach (var item in bibliaRV1960.Where(s => s.Book == "Salmos" && s.Chapter == 
     Console.WriteLine($"{item.Text}");
 }
 
+//Lista de 10 versículos aleatorios
+Random random = new Random();
+var randomVerses = bibliaRV1960.OrderBy(v => random.Next()).Take(10);
+
+foreach (var item in randomVerses)
+{
+    Console.WriteLine($"\n{item.Text}\n{item.Footer} " );
+}
+
 ```
 Espero que esta librería sea de edificación y de bendición para ustedes.
 Gracia y Paz a vosotros.
